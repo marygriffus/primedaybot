@@ -11,36 +11,36 @@ def connect():
                           access_token_secret=MY_ACCESS_TOKEN_SECRET)
     return api
 
+def is_prime(num):
+    if num == 1:
+        return False
+    elif num == 2 or num == 3:
+        return True
+    else:
+        for _ in range(2, num - 1):
+            if num % _ == 0:
+                return False
+                return True
+
 if __name__=="__main__":
 
-    def is_prime(num):
-        if num == 1:
-            return False
-        elif num == 2 or num == 3:
-            return True
-        else:
-            for _ in range(2, num - 1):
-                if num % _ == 0:
-                    return False
-            return True
-
     def prime_tweet():
-        greatness_scale = ["pretty bad", "not too bad", "rockingly", "AMAZING"]
+        greatness_scale = ["pretty bad", "alright", "rockingly", "AMAZINGLY!!"]
         to_tweet = ''
 
-        now = datetime.datetime.now
-        day = is_prime(int(now.day))
-        mo = is_prime(int(now.month))
-        year = is_prime(int(now.year))
+        strtime = datetime.datetime.now()
+        da = is_prime(int(strtime.day))
+        mo = is_prime(int(strtime.month))
+        ye = is_prime(int(strtime.year))
         awesomeness = 0
 
-        if day:
+        if da:
             awesomeness += 1
             to_tweet += "Nice Day! "
         if mo:
             awesomeness += 1
             to_tweet += "Nice month! "
-        if year:
+        if ye:
             awesomeness += 1
             to_tweet += "Nice year! "
 
