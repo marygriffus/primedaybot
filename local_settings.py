@@ -12,4 +12,4 @@ ODDS = 8 #How often do you want this to run? 1/8 times?
 DEBUG = True #Set this to False to start Tweeting live
 STATIC_TEST = False #Set this to True if you want to test Markov generation from a static file instead of the API.
 TEST_SOURCE = '.txt' #The name of a text file of a string-ified list for testing. To avoid unnecessarily hitting Twitter API.
-TWEET_ACCOUNT = '' #The name of the account you're tweeting to.
+TWEET_ACCOUNT = 'PrimeDay2' #The name of the account you're tweeting to.
