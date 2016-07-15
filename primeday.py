@@ -1,5 +1,4 @@
 import twitter
-import schedule
 import time
 import datetime
 from local_settings import *
@@ -49,5 +48,4 @@ if __name__=="__main__":
         api = connect()
         status = api.PostUpdate(to_tweet)
 
-
-    schedule.every().day.at("8:00").do(prime_tweet)
+    prime_tweet()
