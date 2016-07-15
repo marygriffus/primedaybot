@@ -20,7 +20,7 @@ def is_prime(num):
         for _ in range(2, num - 1):
             if num % _ == 0:
                 return False
-                return True
+        return True
 
 if __name__=="__main__":
 
