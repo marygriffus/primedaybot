@@ -49,4 +49,5 @@ if __name__=="__main__":
         api = connect()
         status = api.PostUpdate(to_tweet)
 
-    schedule.every().day.at("24:00").do(prime_tweet)
+
+    schedule.every().day.at("8:00").do(prime_tweet)
